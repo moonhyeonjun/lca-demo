@@ -1,0 +1,35 @@
+@import 'styles/variables';
+
+.dndflow {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.panel {
+  button {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    font-size: inherit;
+    border: 1px solid $gray500;
+    background-color: transparent;
+    width: 100%;
+    color: $black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $gray200;
+  }
+}

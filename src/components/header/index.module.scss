@@ -1,0 +1,21 @@
+@import 'styles/variables';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-area {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 25px;
+  color: inherit;
+  margin-right: 20px;
+  color: $white;
+}

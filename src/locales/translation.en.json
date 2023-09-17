@@ -1,0 +1,69 @@
+{
+  "header": {
+    "lang": "English"
+  },
+  "nav": {
+    "file": "File",
+    "new-file": "New File",
+    "open": "Open",
+    "save": "Save",
+    "save-as": "Save As",
+    "example-file": "Example File",
+    "close-project": "Close Project",
+    "project-info": "Project Info",
+    "print": "Print",
+    "print-settings": "Print Settings",
+    "preview": "Preview",
+    "recent-files": "Recent Files",
+    "exit": "Exit",
+    "edit": "Edit",
+    "add-process": "Add Process",
+    "edit-process": "Edit Process",
+    "add-transport": "Add Transport",
+    "edit-transport": "Edit Transport",
+    "select-all": "Select All",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste",
+    "import-excel": "Import Excel",
+    "import-data": "Import Data File",
+    "import-ecoinvent": "Import Eco-Invent File",
+    "export-excel": "Export Excel",
+    "edit-iso14048": "Edit ISO14048",
+    "tools": "Tools",
+    "edit-material-db": "Edit Material Database",
+    "all-materials-list": "All Materials List",
+    "edit-impact-factors": "Edit Impact Factors",
+    "edit-water-consumption": "Edit Water Consumption",
+    "eco-invent-impact-assessment": "Eco-Invent Impact Assessment",
+    "eco-invent-water-footprint-assessment": "Eco-Invent Water Footprint Assessment",
+    "project-data-check": "Project Data Check",
+    "db-manager": "Database Manager",
+    "db-search": "Database Search",
+    "settings": "Settings",
+    "calculation": "Calculation",
+    "reference-material": "Reference Material",
+    "perform-calculation": "Perform Calculation",
+    "water-footprint": "Water Footprint",
+    "list-analysis": "List Analysis",
+    "impact-assessment": "Impact Assessment",
+    "help": "Help",
+    "update-history": "Update History",
+    "total-info": "Total Information"
+  },
+  "process": {
+    "pre-manufacturing": "Pre-manufacturing",
+    "manufacturing": "Manufacturing",
+    "use": "Use",
+    "dispose": "Dispose"
+  },
+  "modal": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "create-node-placeholder": "Enter process name"
+  },
+  "button": {
+    "horizontal-align": "Horizontal Align",
+    "vertical-align": "Vertical Align"
+  }
+}

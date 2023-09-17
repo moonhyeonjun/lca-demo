@@ -1,0 +1,69 @@
+{
+  "header": {
+    "lang": "한국어"
+  },
+  "nav": {
+    "file": "파일",
+    "new-file": "새 파일",
+    "open": "열기",
+    "save": "저장",
+    "save-as": "다른 이름으로 저장",
+    "example-file": "예제파일",
+    "close-project": "프로젝트 닫기",
+    "project-info": "프로젝트 정보",
+    "print": "인쇄",
+    "print-settings": "인쇄 설정",
+    "preview": "미리보기",
+    "recent-files": "최근 열린 파일 목록",
+    "exit": "종료",
+    "edit": "편집",
+    "add-process": "공정추가",
+    "edit-process": "공정편집",
+    "add-transport": "수송추가",
+    "edit-transport": "수송편집",
+    "select-all": "전체선택",
+    "cut": "잘라내기",
+    "copy": "복사",
+    "paste": "붙여넣기",
+    "import-excel": "표준엑셀형식 가져오기",
+    "import-data": "데이터파일 가져오기",
+    "import-ecoinvent": "에코인벤트 파일 가져오기",
+    "export-excel": "표준엑셀형식 내보내기",
+    "edit-iso14048": "ISO14048편집",
+    "tools": "도구",
+    "edit-material-db": "물질명 DB 편집",
+    "all-materials-list": "전체물질명 목록",
+    "edit-impact-factors": "영향평가 팩터 편집",
+    "edit-water-consumption": "물소모계수 편집",
+    "eco-invent-impact-assessment": "Eco-Invent 영향평가",
+    "eco-invent-water-footprint-assessment": "Eco-Invent 물발자국 평가",
+    "project-data-check": "프로젝트 데이터 확인",
+    "db-manager": "DB 관리자",
+    "db-search": "DB 검색",
+    "settings": "설정",
+    "calculation": "연산",
+    "reference-material": "기준물질",
+    "perform-calculation": "연산수행",
+    "water-footprint": "물발자국",
+    "list-analysis": "목록분석",
+    "impact-assessment": "영향평가",
+    "help": "도움말",
+    "update-history": "업데이트 기록",
+    "total-info": "TOTAL 정보"
+  },
+  "process": {
+    "pre-manufacturing": "제조 전 단계",
+    "manufacturing": "제조 단계",
+    "use": "사용 단계",
+    "dispose": "폐기 단계"
+  },
+  "modal": {
+    "ok": "저장",
+    "cancel": "취소",
+    "create-node-placeholder": "공정명을 입력하세요"
+  },
+  "button": {
+    "horizontal-align": "가로 정렬",
+    "vertical-align": "세로 정렬"
+  }
+}

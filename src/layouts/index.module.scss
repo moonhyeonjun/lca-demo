@@ -1,0 +1,23 @@
+@import 'styles/variables';
+
+.header {
+  color: $white;
+  height: 65px;
+  padding-inline: 50;
+  line-height: 64px;
+  background-color: $primary;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: calc(100vh - 125px);
+}
+
+.footer {
+  color: $white;
+  background-color: $primary;
+  height: 60px;
+}
