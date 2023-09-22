@@ -1,0 +1,33 @@
+@import 'styles/variables';
+
+.commit-row {
+  display: flex;
+}
+
+.bottom-button {
+  margin-left: 10px;
+  background: white;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.bottom-button:hover {
+  border-color: #c7c7c7;
+}
+
+.bottom-button:focus {
+  border-color: $gray400;
+  outline: none;
+}
+
+.save {
+  background-color: #489b1f;
+  border-color: #489b1f;
+  color: white;
+}

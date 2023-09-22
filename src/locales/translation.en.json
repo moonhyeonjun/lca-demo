@@ -52,7 +52,7 @@
     "total-info": "Total Information"
   },
   "process": {
-    "pre-manufacturing": "Pre-manufacturing",
+    "preManufacturing": "Pre-manufacturing",
     "manufacturing": "Manufacturing",
     "use": "Use",
     "dispose": "Dispose"
@@ -65,5 +65,28 @@
   "button": {
     "horizontal-align": "Horizontal Align",
     "vertical-align": "Vertical Align"
+  },
+  "spread-sheet": {
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste",
+    "insert-row-below": "Insert Row Below",
+    "duplicate-row": "Duplicate Row",
+    "delete-row": "Delete Row",
+    "add": "Add",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "short-cut": {
+    "new-file": "New File",
+    "open": "Open",
+    "save": "Save",
+    "print": "Print",
+    "reference-material": "Reference Material",
+    "perform-calculation": "Perform Calculation",
+    "list-analysis": "List Analysis",
+    "impact-assessment": "Impact Assessment",
+    "db-manager": "Database Manager",
+    "help": "Help"
   }
 }

@@ -2,18 +2,19 @@
 
 .header {
   color: $white;
-  height: 65px;
+  height: 40px;
   padding-inline: 50;
   line-height: 64px;
   background-color: $primary;
-  display: flex;
+  padding: 0 20px !important;
+  // display: flex;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  height: calc(100vh - 125px);
+  height: calc(100vh - 100px);
 }
 
 .footer {

@@ -29,3 +29,12 @@
     }
   }
 }
+
+.language-button {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 5px;
+  }
+}

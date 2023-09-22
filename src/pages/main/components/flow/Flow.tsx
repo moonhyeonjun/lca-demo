@@ -13,10 +13,14 @@ import ReactFlow, {
   MarkerType,
 } from 'reactflow';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { saveData, addData, deleteData } from 'store/reducer/data';
-import { Modal, Input } from 'antd';
+import { Modal, Input, Tooltip } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { initNodes, initEdges } from 'pages/main/initData';
+import { VscSplitHorizontal } from 'react-icons/vsc';
+import { RxViewHorizontal } from 'react-icons/rx';
+
 import DisposeNode from './nodeTypes/DisposeNode';
 import PreManufacturingNode from './nodeTypes/PreManufacturingNode';
 import ManufacturingNode from './nodeTypes/ManufacturingNode';
@@ -31,6 +35,7 @@ import uuid from 'react-uuid';
 import dagre from 'dagre';
 
 import 'reactflow/dist/style.css';
+import ShortCut from 'components/shortCut';
 
 const cn = classNames.bind(styles);
 
@@ -151,6 +156,7 @@ const defaultEdgeOptions = {
 const Flow = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const flowWrapperRef = useRef<any>(null);
   const flowRef = useRef<any>(null);
@@ -163,8 +169,10 @@ const Flow = () => {
   const [paneMenu, setPaneMenu] = useState<any>(null);
 
   useEffect(() => {
-    setNodes(initNodes);
-    setEdges(initEdges);
+    // setNodes(initNodes);
+    // setEdges(initEdges);
+    setNodes([]);
+    setEdges([]);
     getLayoutedElements(initNodes, initEdges);
     const data = initNodes.map((node) => ({
       id: node.id,
@@ -378,6 +386,8 @@ const Flow = () => {
   // node를 더블 클릭하면 해당 노드의 정보를 가져옵니다.
   const onNodeDoubleClick = (event: any, node: any) => {
     console.log('node', node);
+    // /process/:id로 이동
+    navigate(`/process/${node.id}`);
   };
 
   // edge를 더블 클릭하면 해당 edge의 정보를 가져옵니다.
@@ -403,6 +413,7 @@ const Flow = () => {
   return (
     <div className={cn('dndflow')}>
       <div className={cn('reactflow-wrapper')} ref={flowWrapperRef}>
+        <ShortCut />
         <ReactFlow
           ref={flowRef}
           nodes={nodes}
@@ -433,10 +444,14 @@ const Flow = () => {
         >
           <Panel className={cn('panel')} position="top-right">
             <button onClick={() => onLayout('TB')}>
-              {t('button.vertical-align')}
+              <Tooltip title={t('button.vertical-align')}>
+                <RxViewHorizontal />
+              </Tooltip>
             </button>
             <button onClick={() => onLayout('LR')}>
-              {t('button.horizontal-align')}
+              <Tooltip title={t('button.horizontal-align')}>
+                <VscSplitHorizontal />
+              </Tooltip>
             </button>
           </Panel>
           <Controls />

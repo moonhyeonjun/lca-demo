@@ -1,17 +1,24 @@
+import { useEffect } from 'react';
 import Flow from 'pages/main/components/flow/Flow';
-import styles from './index.module.scss';
-import classNames from 'classnames/bind';
 import TreeNode from './components/tree';
+import SpreadSheet from './components/sheet';
 import { ReactFlowProvider } from 'reactflow';
+import { useLocation } from 'react-router-dom';
 
-const cn = classNames.bind(styles);
+import './index.scss';
 
 const MainPage = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location.pathname);
+  }, [location]);
+
   return (
-    <div className={cn('main-page')}>
+    <div className="main">
       <ReactFlowProvider>
         <TreeNode />
-        <Flow />
+        {location.pathname === '/' ? <Flow /> : <SpreadSheet />}
       </ReactFlowProvider>
     </div>
   );

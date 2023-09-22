@@ -52,7 +52,7 @@
     "total-info": "TOTAL 정보"
   },
   "process": {
-    "pre-manufacturing": "제조 전 단계",
+    "preManufacturing": "제조 전 단계",
     "manufacturing": "제조 단계",
     "use": "사용 단계",
     "dispose": "폐기 단계"
@@ -65,5 +65,28 @@
   "button": {
     "horizontal-align": "가로 정렬",
     "vertical-align": "세로 정렬"
+  },
+  "spread-sheet": {
+    "cut": "잘라내기",
+    "copy": "복사",
+    "paste": "붙여넣기",
+    "insert-row-below": "아래에 행 삽입",
+    "duplicate-row": "행 복제",
+    "delete-row": "행 삭제",
+    "add": "추가",
+    "cancel": "취소",
+    "save": "저장"
+  },
+  "short-cut": {
+    "new-file": "새 파일",
+    "open": "열기",
+    "save": "저장",
+    "print": "인쇄",
+    "reference-material": "기준물질",
+    "perform-calculation": "연산수행",
+    "list-analysis": "목록분석",
+    "impact-assessment": "영향평가",
+    "db-manager": "DB 관리자",
+    "help": "도움말"
   }
 }

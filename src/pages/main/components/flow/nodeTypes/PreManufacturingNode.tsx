@@ -36,7 +36,7 @@ const PreManufacturingNode = ({
         minHeight={100}
       />
       <Node
-        label={t('process.pre-manufacturing')}
+        label={t('process.preManufacturing')}
         selected={selected}
         color={'#808080'}
         content={
