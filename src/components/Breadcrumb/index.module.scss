@@ -1,0 +1,12 @@
+@import 'styles/variables';
+
+.breadcrub {
+  margin: 5px 0;
+}
+
+.touch {
+  cursor: pointer;
+  &:hover {
+    color: $primary;
+  }
+}

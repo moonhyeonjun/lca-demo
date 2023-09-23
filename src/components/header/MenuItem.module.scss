@@ -1,41 +1,19 @@
 @import 'styles/variables';
 
-li {
-  margin: 0 10px;
-}
-
 .menu-items {
   position: relative;
   font-size: 14px;
-}
-
-.menu-items a {
-  display: block;
-  font-size: inherit;
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid $gray200;
-  color: $black;
-}
-
-.menu-items a:hover {
-  text-decoration: underline;
-}
-
-.menu-items button {
-  display: flex;
-  align-items: center;
-  color: inherit;
-  font-size: inherit;
-  border: none;
-  background-color: transparent;
+  margin: 0 10px;
   cursor: pointer;
-  width: 100%;
-  color: $white;
-}
 
-button span {
-  margin-left: 3px;
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: $white;
+  }
 }
 
 .hover-underline-animation {
@@ -62,12 +40,17 @@ button span {
   transform-origin: bottom left;
 }
 
-.arrow::after {
-  content: '';
-  display: inline-block;
-  margin-left: 0.28em;
-  vertical-align: 0.09em;
-  border-top: 0.42em solid;
-  border-right: 0.32em solid transparent;
-  border-left: 0.32em solid transparent;
+.sub-menu {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  // border-bottom: 1px solid $fourth;
+
+  svg {
+    margin-right: 5px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

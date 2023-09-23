@@ -1,6 +1,7 @@
 {
   "header": {
-    "lang": "한국어"
+    "lang": "한국어",
+    "logout": "로그아웃"
   },
   "nav": {
     "file": "파일",
@@ -42,7 +43,7 @@
     "db-search": "DB 검색",
     "settings": "설정",
     "calculation": "연산",
-    "reference-material": "기준물질",
+    "standard-material": "기준물질",
     "perform-calculation": "연산수행",
     "water-footprint": "물발자국",
     "list-analysis": "목록분석",
@@ -60,7 +61,12 @@
   "modal": {
     "ok": "저장",
     "cancel": "취소",
-    "create-node-placeholder": "공정명을 입력하세요"
+    "close": "닫기",
+    "create-node-placeholder": "공정명을 입력하세요",
+    "data-changed-title": "데이터 변경",
+    "data-changed-message": "데이터가 변경되었습니다. 저장하시겠습니까?",
+    "calculation-sucess-title": "환경 영향 평가 연산 완료",
+    "calculation-sucess-sub-title": "영향 평가에서 연산 결과를 확인하세요."
   },
   "button": {
     "horizontal-align": "가로 정렬",
@@ -82,7 +88,7 @@
     "open": "열기",
     "save": "저장",
     "print": "인쇄",
-    "reference-material": "기준물질",
+    "standard-material": "기준물질",
     "perform-calculation": "연산수행",
     "list-analysis": "목록분석",
     "impact-assessment": "영향평가",

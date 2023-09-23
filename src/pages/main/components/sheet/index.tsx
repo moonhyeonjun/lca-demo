@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   DynamicDataSheetGrid,
   textColumn,
@@ -10,9 +10,10 @@ import { BiCopy, BiCut, BiPaste } from 'react-icons/bi';
 import { TbRowInsertBottom } from 'react-icons/tb';
 import { GrDuplicate } from 'react-icons/gr';
 import { RiDeleteBin7Line } from 'react-icons/ri';
+import { MdOutlineArrowBack } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { Button } from 'antd';
+import { Modal } from 'antd';
 import uuid from 'react-uuid';
 import styles from './index.module.scss';
 import classNames from 'classnames/bind';
@@ -21,16 +22,60 @@ import 'react-datasheet-grid/dist/style.css';
 
 const cn = classNames.bind(styles);
 
+const TabBar = ({ tabs, activeTab, onTabClick }: any) => {
+  return (
+    <div className={cn('spread-sheet-tab-bar')}>
+      {tabs.map((tab: any, index: number) => (
+        <div
+          key={index}
+          className={cn(
+            'spread-sheet-tab',
+            index === activeTab ? 'active' : '',
+          )}
+          onClick={() => onTabClick(index)}
+        >
+          {tab.label}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const SpreadSheet = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const [data, setData] = useState<any>(dummyData());
-  const [prevData, setPrevData] = useState(dummyData());
-
   const createdRowIds = useMemo(() => new Set(), []);
   const deletedRowIds = useMemo(() => new Set(), []);
   const updatedRowIds = useMemo(() => new Set(), []);
+  const [init, setInit] = useState(false);
+
+  const [tabs, setTabs] = useState<any>([
+    {
+      label: 'Sheet 1',
+      data: [],
+    },
+  ]);
+
+  const [data, setData] = useState<any>([]);
+  const [prevData, setPrevData] = useState([]);
+
+  const [activeTab, setActiveTab] = useState(0);
+
+  useEffect(() => {
+    const tabs = [
+      { label: 'Sheet 1', data: dummyData() },
+      { label: 'Sheet 2', data: [] },
+    ];
+    setInit(true);
+    setTabs(tabs);
+    setData(tabs[0].data);
+  }, []);
+
+  useEffect(() => {
+    if (!init) return;
+    setData(tabs[activeTab].data);
+  }, [activeTab]);
 
   const columns = useMemo(
     () => [
@@ -100,6 +145,11 @@ const SpreadSheet = () => {
     const newData = data.filter(({ id }: any) => !deletedRowIds.has(id));
     setData(newData);
     setPrevData(newData);
+    setTabs((tabs: any) => {
+      const newTabs = [...tabs];
+      newTabs[activeTab].data = newData;
+      return newTabs;
+    });
 
     createdRowIds.clear();
     deletedRowIds.clear();
@@ -235,12 +285,38 @@ const SpreadSheet = () => {
     },
   ];
 
-  return (
-    <div>
-      <Button className={cn('back-button')} onClick={() => navigate(-1)}>
-        Back
-      </Button>
+  const handleTabClick = (index: number) => {
+    const isDataChanged =
+      createdRowIds.size > 0 ||
+      updatedRowIds.size > 0 ||
+      deletedRowIds.size > 0;
 
+    if (isDataChanged) {
+      Modal.confirm({
+        title: t('modal.data-changed-title'),
+        content: t('modal.data-changed-message'),
+        okText: t('modal.ok'),
+        cancelText: t('modal.cancel'),
+        onOk() {
+          save();
+          setActiveTab(index);
+        },
+        onCancel() {
+          cancel();
+          setActiveTab(index);
+          return;
+        },
+      });
+    } else {
+      setActiveTab(index);
+    }
+  };
+
+  return (
+    <div className={cn('spread-sheet-wrapper')}>
+      {/* <button className={cn('back-button')} onClick={() => navigate(-1)}>
+        <MdOutlineArrowBack />
+      </button> */}
       <DynamicDataSheetGrid
         value={data}
         height={500}
@@ -252,6 +328,7 @@ const SpreadSheet = () => {
         createRow={createRow}
         contextMenuComponent={ContextMenu}
       />
+      <TabBar tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
     </div>
   );
 };

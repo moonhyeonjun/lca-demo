@@ -1,6 +1,7 @@
 {
   "header": {
-    "lang": "English"
+    "lang": "English",
+    "logout": "Logout"
   },
   "nav": {
     "file": "File",
@@ -42,7 +43,7 @@
     "db-search": "Database Search",
     "settings": "Settings",
     "calculation": "Calculation",
-    "reference-material": "Reference Material",
+    "standard-material": "Standard Material",
     "perform-calculation": "Perform Calculation",
     "water-footprint": "Water Footprint",
     "list-analysis": "List Analysis",
@@ -60,7 +61,12 @@
   "modal": {
     "ok": "OK",
     "cancel": "Cancel",
-    "create-node-placeholder": "Enter process name"
+    "close": "Close",
+    "create-node-placeholder": "Enter process name",
+    "data-changed-title": "Data Changed",
+    "data-changed-message": "Data has been changed, do you want to save it?",
+    "calculation-sucess-title": "Environmental Impact Assessment calculation completed",
+    "calculation-sucess-sub-title": "Check the results of operations in impack assessment."
   },
   "button": {
     "horizontal-align": "Horizontal Align",
@@ -82,7 +88,7 @@
     "open": "Open",
     "save": "Save",
     "print": "Print",
-    "reference-material": "Reference Material",
+    "standard-material": "Standard Material",
     "perform-calculation": "Perform Calculation",
     "list-analysis": "List Analysis",
     "impact-assessment": "Impact Assessment",

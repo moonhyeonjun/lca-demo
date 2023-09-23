@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Dropdown } from 'antd';
 import { useTranslation } from 'react-i18next';
+import koIcon from 'assets/images/ko.png';
+import enIcon from 'assets/images/en.png';
 
 import classNames from 'classnames/bind';
 import styles from './Language.module.scss';
@@ -26,7 +28,7 @@ const Language = () => {
           onClick={() => changeLanguage('ko')}
           className={cn('language-button')}
         >
-          <img src={'/ko.png'} alt="language" width="20px" />
+          <img src={koIcon} alt="language" width="20px" />
           한국어
         </div>
       ),
@@ -38,7 +40,7 @@ const Language = () => {
           onClick={() => changeLanguage('en')}
           className={cn('language-button')}
         >
-          <img src={'/en.png'} alt="language" width="20px" />
+          <img src={enIcon} alt="language" width="20px" />
           English
         </div>
       ),
@@ -51,14 +53,15 @@ const Language = () => {
         menu={{ items }}
         placement="bottomRight"
         arrow={{ pointAtCenter: true }}
+        trigger={['click']}
       >
         {language === 'ko' ? (
           <Button type="text" className={cn('language-button')}>
-            <img src={'/ko.png'} alt="language" width="20px" />
+            <img src={koIcon} alt="language" width="20px" />
           </Button>
         ) : (
           <Button type="text" className={cn('language-button')}>
-            <img src={'/en.png'} alt="language" width="20px" />
+            <img src={enIcon} alt="language" width="20px" />
           </Button>
         )}
       </Dropdown>

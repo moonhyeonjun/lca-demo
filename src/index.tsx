@@ -4,7 +4,7 @@ import App from 'App';
 import { BrowserRouter } from 'react-router-dom';
 import 'locales/i18n';
 
-import 'index.scss';
+import './index.scss';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,

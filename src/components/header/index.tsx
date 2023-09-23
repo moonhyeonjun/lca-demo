@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import Language from './Language';
+import Settings from './Settings';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
@@ -15,7 +16,10 @@ const Header = () => {
         </Link>
         <Navbar />
       </div>
-      <Language />
+      <div className={cn('nav-area-right')}>
+        <Language />
+        <Settings />
+      </div>
     </header>
   );
 };

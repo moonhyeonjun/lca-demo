@@ -15,7 +15,6 @@ const TreeNode: React.FC = () => {
   const { data } = useSelector((state: any) => state.data);
   const [treeData, setTreeData] = useState<DataNode[]>([]);
   const [expandedKeys, setExpandedKeys] = useState<string[]>([]);
-  const { getNode, setNodes, addNodes, setEdges } = useReactFlow();
 
   useEffect(() => {
     const root = {
@@ -37,7 +36,6 @@ const TreeNode: React.FC = () => {
         children,
       },
     ];
-
     setTreeData(treeData);
     setExpandedKeys([root.key, ...data.map((item: any) => item.id)]);
   }, [data]);

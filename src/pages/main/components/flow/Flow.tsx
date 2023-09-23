@@ -35,7 +35,7 @@ import uuid from 'react-uuid';
 import dagre from 'dagre';
 
 import 'reactflow/dist/style.css';
-import ShortCut from 'components/shortCut';
+import ShortCut from 'pages/main/components/shortCut';
 
 const cn = classNames.bind(styles);
 
@@ -169,10 +169,10 @@ const Flow = () => {
   const [paneMenu, setPaneMenu] = useState<any>(null);
 
   useEffect(() => {
-    // setNodes(initNodes);
-    // setEdges(initEdges);
-    setNodes([]);
-    setEdges([]);
+    setNodes(initNodes);
+    setEdges(initEdges);
+    // setNodes([]);
+    // setEdges([]);
     getLayoutedElements(initNodes, initEdges);
     const data = initNodes.map((node) => ({
       id: node.id,
@@ -385,9 +385,8 @@ const Flow = () => {
 
   // node를 더블 클릭하면 해당 노드의 정보를 가져옵니다.
   const onNodeDoubleClick = (event: any, node: any) => {
-    console.log('node', node);
     // /process/:id로 이동
-    navigate(`/process/${node.id}`);
+    navigate(`/process/${node.data?.label}`);
   };
 
   // edge를 더블 클릭하면 해당 edge의 정보를 가져옵니다.

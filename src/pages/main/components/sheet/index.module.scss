@@ -1,5 +1,10 @@
 @import 'styles/variables';
 
+.spread-sheet-wrapper {
+  position: relative;
+  height: 100%;
+}
+
 .commit-row {
   display: flex;
 }
@@ -30,4 +35,54 @@
   background-color: #489b1f;
   border-color: #489b1f;
   color: white;
+}
+
+.back-button {
+  background: white;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover {
+    border-color: #c7c7c7;
+    background-color: #e0e0e0;
+  }
+}
+
+.spread-sheet-tab-bar {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-top: 1px solid #ccc;
+  padding: 5px;
+}
+
+.spread-sheet-tab {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-right: 2px;
+  transition: background-color 0.3s ease;
+
+  &:hover:not(.active) {
+    background-color: #e0e0e0;
+  }
+}
+
+.active {
+  background-color: $primary;
+  color: $white;
+  border-bottom: 1px solid white;
+  position: relative;
+  z-index: 1;
 }

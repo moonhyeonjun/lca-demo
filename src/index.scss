@@ -1,9 +1,21 @@
+@font-face {
+  font-family: 'Noto_Sans_KR';
+  src: url('./assets/fonts/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Kenia';
+  src: url('./assets/fonts/Kenia/Kenia-Regular.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Noto_Sans_KR;
 }
 
-body {
-  font-family: sans-serif;
+.ant-layout-footer {
+  height: 20px;
+  padding: 0;
 }

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { FaBeer } from 'react-icons/fa';
 
 export const getMenuItems = () => {
   const { t } = useTranslation();
@@ -8,51 +9,51 @@ export const getMenuItems = () => {
       submenu: [
         {
           title: t('nav.new-file'),
-          url: 'new-file',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.open'),
-          url: 'open',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.save'),
-          url: 'save',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.save-as'),
-          url: 'save-as',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.example-file'),
-          url: 'example-file',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.close-project'),
-          url: 'close-project',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.project-info'),
-          url: 'project-info',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.print'),
-          url: 'print',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.print-settings'),
-          url: 'print-settings',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.preview'),
-          url: 'preview',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.recent-files'),
-          url: 'recent-files',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.exit'),
-          url: 'exit',
+          icon: <FaBeer />,
         },
       ],
     },
@@ -61,55 +62,55 @@ export const getMenuItems = () => {
       submenu: [
         {
           title: t('nav.add-process'),
-          url: 'add-process',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.edit-process'),
-          url: 'edit-process',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.add-transport'),
-          url: 'add-transport',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.edit-transport'),
-          url: 'edit-transport',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.select-all'),
-          url: 'select-all',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.cut'),
-          url: 'cut',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.copy'),
-          url: 'copy',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.paste'),
-          url: 'paste',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.import-excel'),
-          url: 'import-excel',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.import-data'),
-          url: 'import-data',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.import-ecoinvent'),
-          url: 'import-ecoinvent',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.export-excel'),
-          url: 'export-excel',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.edit-iso14048'),
-          url: 'edit-iso14048',
+          icon: <FaBeer />,
         },
       ],
     },
@@ -118,43 +119,39 @@ export const getMenuItems = () => {
       submenu: [
         {
           title: t('nav.edit-material-db'),
-          url: 'edit-material-db',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.all-materials-list'),
-          url: 'all-materials-list',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.edit-impact-factors'),
-          url: 'edit-impact-factors',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.edit-water-consumption'),
-          url: 'edit-water-consumption',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.eco-invent-impact-assessment'),
-          url: 'eco-invent-impact-assessment',
-        },
-        {
-          title: t('nav.eco-invent-water-footprint-assessment'),
-          url: 'eco-invent-water-footprint-assessment',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.project-data-check'),
-          url: 'project-data-check',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.db-manager'),
-          url: 'db-manager',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.db-search'),
-          url: 'db-search',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.settings'),
-          url: 'settings',
+          icon: <FaBeer />,
         },
       ],
     },
@@ -162,24 +159,24 @@ export const getMenuItems = () => {
       title: t('nav.calculation'),
       submenu: [
         {
-          title: t('nav.reference-material'),
-          url: 'reference-material',
+          title: t('nav.standard-material'),
+          icon: <FaBeer />,
         },
         {
           title: t('nav.perform-calculation'),
-          url: 'perform-calculation',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.water-footprint'),
-          url: 'water-footprint',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.list-analysis'),
-          url: 'list-analysis',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.impact-assessment'),
-          url: 'impact-assessment',
+          icon: <FaBeer />,
         },
       ],
     },
@@ -188,15 +185,15 @@ export const getMenuItems = () => {
       submenu: [
         {
           title: t('nav.help'),
-          url: 'help',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.update-history'),
-          url: 'update-history',
+          icon: <FaBeer />,
         },
         {
           title: t('nav.total-info'),
-          url: 'total-info',
+          icon: <FaBeer />,
         },
       ],
     },
