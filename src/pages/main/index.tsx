@@ -22,6 +22,13 @@ const MainPage = () => {
           maxWidth={600}
           minWidth={100}
           enable={{ right: true }}
+          handleStyles={{
+            right: {
+              width: '20px',
+              height: '100%',
+              // background: 'red',
+            },
+          }}
         >
           <TreeNode />
         </Resizable>

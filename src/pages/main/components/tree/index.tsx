@@ -22,7 +22,7 @@ const TreeNode: React.FC = () => {
       title: 'LCA',
     };
 
-    const children = data.map((item: any) => {
+    const children = dummyData.map((item: any) => {
       return {
         key: item.id,
         title: item.data,
@@ -65,5 +65,13 @@ const TreeNode: React.FC = () => {
     />
   );
 };
+
+// dummy data 100개 만들기
+const dummyData = Array.from({ length: 100 }, (_, i) => {
+  return {
+    key: i.toString(),
+    data: `title ${i}`,
+  };
+});
 
 export default TreeNode;
